@@ -4,6 +4,24 @@
 
 For instructions on setting up and running the local development environment, please see [Development Guide](docs/DEVELOPMENT.md).
 
+### 🚀 Quick Setup with Nix (Recommended)
+
+If you have Nix installed, you can enter a fully-configured development environment with a single command:
+
+```bash
+nix develop
+```
+
+Or with direnv for automatic loading:
+
+```bash
+direnv allow
+```
+
+This ensures you have all the correct dependencies and tools configured exactly as the project requires, including the proper `rustfmt` settings.
+
+See [Development Guide - Nix Development Shell](docs/DEVELOPMENT.md#option-1-nix-development-shell-recommended) for more details.
+
 ### 🔧 Code Formatting Rules
 
 **MANDATORY**: All code must be properly formatted before committing. This project enforces strict formatting standards to maintain code consistency and readability.

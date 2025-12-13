@@ -114,9 +114,25 @@ docker compose --profile observability up -d
 
 **NOTE**: We recommend reviewing the `docker-compose.yaml` file before running. It defines several services including Grafana, Prometheus, and Jaeger, which are helpful for RustFS observability. If you wish to start Redis or Nginx containers, you can specify the corresponding profiles.
 
-### 3\. Build from Source (Option 3) - Advanced Users
+### 3\. Build from Source (Option 3) - Development Setup
 
-For developers who want to build RustFS Docker images from source with multi-architecture support:
+#### Quick Development Setup with Nix
+
+For developers, the easiest way to set up a development environment is using Nix:
+
+```bash
+# Enter the development environment
+nix develop
+
+# Or with direnv for automatic loading (recommended)
+direnv allow
+```
+
+This provides all required dependencies and tools configured correctly. See [Development Guide](docs/DEVELOPMENT.md#option-1-nix-development-shell-recommended) for details.
+
+#### Build from Source - Advanced Users
+
+For those building RustFS Docker images from source with multi-architecture support:
 
 ```bash
 # Build multi-architecture images locally
